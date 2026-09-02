@@ -1,6 +1,6 @@
 import { For } from "solid-js";
 import { ProfileCard } from "../../components";
-import { portfolioInfo, skills } from "../../stores";
+import { experience, portfolioInfo, skills } from "../../stores";
 
 function AboutPage() {
   return (
@@ -74,52 +74,46 @@ function AboutPage() {
             <div class="bg-secondary text-surface py-2 px-4 font-label-mono font-bold uppercase">
               <h1>{"[ EXPERIENCE ] -> root/logs/sys_log.txt"}</h1>
             </div>
+
             <div class="p-6 font-label-mono text-sm text-on-surface flex flex-col gap-2">
-              <div class="flex flex-col sm:flex-row sm:gap-4 border-l-4 border-primary-fixed pl-4 py-2 hover:bg-surface-variant transition-colors">
-                <span class="text-primary-fixed shrink-0 font-bold w-32">
-                  2023-01-15
-                </span>
-                <span class="text-primary">[INFO]</span>
-                <span class="text-on-surface-variant">
-                  PROMOTED TO LEAD_ARCHITECT @ NEON_CORP
-                </span>
-              </div>
-              <div class="flex flex-col sm:flex-row sm:gap-4 border-l-4 border-surface-variant pl-4 py-2 hover:border-primary-fixed hover:bg-surface-variant transition-colors">
-                <span class="text-primary-fixed-dim shrink-0 font-bold w-32">
-                  2022-09-01
-                </span>
-                <span class="text-primary">[INFO]</span>
-                <span class="text-on-surface-variant">
-                  STARTED AT NEON_CORP AS SR_DEV
-                </span>
-              </div>
-              <div class="flex flex-col sm:flex-row sm:gap-4 border-l-4 border-surface-variant pl-4 py-2 hover:border-primary-fixed hover:bg-surface-variant transition-colors">
-                <span class="text-primary-fixed-dim shrink-0 font-bold w-32">
-                  2020-03-10
-                </span>
-                <span class="text-tertiary-fixed">[WARN]</span>
-                <span class="text-on-surface-variant">
-                  SURVIVED Y2K20 ARCHITECTURE MIGRATION
-                </span>
-              </div>
-              <div class="flex flex-col sm:flex-row sm:gap-4 border-l-4 border-surface-variant pl-4 py-2 hover:border-primary-fixed hover:bg-surface-variant transition-colors">
-                <span class="text-primary-fixed-dim shrink-0 font-bold w-32">
-                  2018-06-01
-                </span>
-                <span class="text-primary">[INFO]</span>
-                <span class="text-on-surface-variant">
-                  INITIATED BOOTCAMP_TRAINING_PROTOCOL
-                </span>
-              </div>
-              <div class="flex flex-col sm:flex-row sm:gap-4 border-l-4 border-surface-variant pl-4 py-2 hover:border-primary-fixed hover:bg-surface-variant transition-colors">
-                <span class="text-primary-fixed-dim shrink-0 font-bold w-32">
-                  0000-00-00
-                </span>
-                <span class="text-primary">[SYS_]</span>
-                <span class="text-on-surface-variant line-through opacity-50">
-                  EPOCH ZERO - AWAKENING
-                </span>
-              </div>
+              <For each={experience()}>
+                {(item, index) => (
+                  <div
+                    class="flex flex-col sm:flex-row sm:gap-4 border-l-4 pl-4 py-2 hover:border-primary-fixed hover:bg-surface-variant transition-colors"
+                    classList={{
+                      "cursor-pointer": !!item.url,
+                      "border-primary-fixed": index() === 0, // Highlights the latest entry like your original code
+                      "border-surface-variant": index() !== 0,
+                    }}
+                    onClick={() => {
+                      if (item.url)
+                        window.open(item.url, "_blank", "noopener,noreferrer");
+                    }}
+                  >
+                    <span
+                      class={`shrink-0 font-bold w-32 ${index() === 0 ? "text-primary-fixed" : "text-primary-fixed-dim"}`}
+                    >
+                      {item.date}
+                    </span>
+
+                    <span
+                      class={
+                        item.catagory === "[WARN]"
+                          ? "text-tertiary-fixed"
+                          : "text-primary"
+                      }
+                    >
+                      {item.catagory}
+                    </span>
+
+                    <span
+                      class={`text-on-surface-variant ${item.title.includes("EPOCH") ? "line-through opacity-50" : ""}`}
+                    >
+                      {item.title}
+                    </span>
+                  </div>
+                )}
+              </For>
             </div>
           </div>
         </div>

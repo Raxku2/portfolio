@@ -1,3 +1,3 @@
-import { portfolioInfo, SetPortfolioInfo, skills } from "./person/PersonInfo";
+import { experience, portfolioInfo, projects, SetPortfolioInfo, skills } from "./person/PersonInfo";
 
-export { skills, portfolioInfo, SetPortfolioInfo };
+export {projects, experience, skills, portfolioInfo, SetPortfolioInfo };
