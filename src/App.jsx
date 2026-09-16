@@ -1,0 +1,27 @@
+import { onMount } from "solid-js";
+import { MainFooter, PageHeader, SideNavBar } from "./components";
+import { startUpFunc } from "./hooks";
+
+// Note: Add 'props' as an argument to your component
+function App(props) {
+  onMount(async () => { await startUpFunc()});
+  return (
+    <>
+      <SideNavBar />
+
+      <div class="pl-16 flex flex-col h-screen">
+        <PageHeader />
+
+        <main class="grow pt-16 pb-12 bg-background relative z-10 px-margin">
+          
+          {/* The router will automatically inject AboutPage (or any matched route) right here */}
+          {props.children}
+          
+        </main>
+      </div>
+      <MainFooter class="hidden" />
+    </>
+  );
+}
+
+export default App;
