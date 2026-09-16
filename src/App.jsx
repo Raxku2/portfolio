@@ -1,7 +1,10 @@
+import { onMount } from "solid-js";
 import { MainFooter, PageHeader, SideNavBar } from "./components";
+import { startUpFunc } from "./hooks";
 
 // Note: Add 'props' as an argument to your component
 function App(props) {
+  onMount(async () => { await startUpFunc()});
   return (
     <>
       <SideNavBar />

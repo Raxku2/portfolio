@@ -12,14 +12,6 @@ export const PageHeader = () => {
         <TopNavBar />
       </div>
 
-      <div class="flex items-center gap-4">
-        <span class="font-label-mono text-on-surface-variant uppercase">USR_Guest</span>
-        <img
-          alt="Profile"
-          class="w-8 h-8 rounded-none border border-outline object-cover shadow-[2px_2px_0px_#00fbfb]"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2UbLKuD27Cax_yJtLD0FZsMafR-aU3SHJKDoHVirS-G6ijqJoOqqX3K-30JS4aN3cnj-dNJl0M_nJP0TGlbJnoyFSQBVJZztsthCBDch_zmoxZdbtrJp-maHycytIdtXvQozlW7sojgSs2cA0waXyqYEwBPqgHmnbw7PCJa5BvItNpulaztpf20rnh4OMkt79-YqQW6VYAuNKSihR7FbOLqFFafr8r8TQ1E6XBgXfGwN7boiWsaY"
-        />
-      </div>
     </header>
   );
 };
