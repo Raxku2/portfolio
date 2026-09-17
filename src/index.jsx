@@ -13,10 +13,10 @@ render(
     <Router>
       <Route component={App}>
         <Route path="/" component={AboutPage} />
-        <Route path="/home" component={<HomePage/>} />
-        <Route path="/contact" component={<ContactPage/>} />
-        <Route path="/projects" component={<ProjectsPage/>} />
-        <Route path="/dashboard" component={<MainDashboard/>} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/projects" component={ProjectsPage} />
+        <Route path="/dashboard" component={MainDashboard} />
         {/* Add more normal pages here later */}
       </Route>
 
