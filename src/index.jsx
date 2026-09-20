@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 
 // Import your pages
-import { AboutPage, ContactPage, HomePage, MainDashboard, ProjectsPage } from "./pages";
+import { AboutPage, ContactPage, HomePage, MainDashboard, PrivacyPage, ProjectsPage } from "./pages";
 
 const root = document.getElementById("root");
 
@@ -22,6 +22,7 @@ render(
         <Route path="/apointment" component={() =>  <h1>apointment</h1>} />
         <Route path="/dashboard" component={MainDashboard} />
         <Route path="/blogs" component={() => <h1>blogs</h1>} />
+        <Route path="/privacy" component={PrivacyPage} />
         {/* Add more normal pages here later */}
       </Route>
 

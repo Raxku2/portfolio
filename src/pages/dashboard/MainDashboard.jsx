@@ -2,9 +2,6 @@ function MainDashboard() {
   return (
     <div class="flex flex-col w-full px-margin py-6 gap-margin max-w-container-max mx-auto relative z-10 text-on-surface">
       <div class="grid grid-cols-1 xl:grid-cols-12 gap-margin">
-
-
-
         <div class="xl:col-span-4 flex flex-col gap-margin">
           <section class="border-2 border-outline-variant bg-surface flex flex-col relative group">
             <div class="bg-secondary-fixed-dim border-b-2 border-outline-variant px-3 py-1 flex justify-between items-center h-8">
@@ -145,11 +142,6 @@ function MainDashboard() {
             </div>
           </section>
         </div>
-
-
-
-
-
 
         <div class="xl:col-span-8 flex flex-col gap-margin">
           <section class="border-2 border-outline-variant bg-surface flex flex-col relative">
