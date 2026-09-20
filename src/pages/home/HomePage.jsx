@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router";
 import { portfolioInfo } from "../../stores";
 
 function HomePage() {
@@ -90,7 +91,7 @@ function HomePage() {
                   ROLE:
                 </span>
                 <span class="text-primary font-bold">
-                  Principal Systems Architect &amp; Full-Stack Engineer
+                  {portfolioInfo().role}
                 </span>
               </div>
               <div class="flex items-center gap-2">
@@ -170,6 +171,11 @@ function HomePage() {
             </div>
           </div>
         </div>
+
+
+
+
+
         <div class="flex flex-col gap-3">
           <div class="flex items-center justify-between border-b border-outline-variant pb-2">
             <div class="flex items-center gap-2 font-headline-md text-sm md:text-base text-primary uppercase">
@@ -180,10 +186,14 @@ function HomePage() {
               [PRESS NUMKEY 1-9 OR CLICK ENTRY]
             </span>
           </div>
+
+
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 font-label-mono">
-            <a
+
+
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#about"
+              href="/"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[1]</span>
@@ -194,10 +204,12 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::SYS_BIO
               </span>
-            </a>
-            <a
+            </A>
+
+
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#projects"
+              href="/projects"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[2]</span>
@@ -208,10 +220,12 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::PORTFOLIO
               </span>
-            </a>
-            <a
+            </A>
+
+
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#contact"
+              href="/contact"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[3]</span>
@@ -222,10 +236,13 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::DISPATCH
               </span>
-            </a>
-            <a
+            </A>
+
+
+
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-tertiary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#fce442] focus:outline-none"
-              href="#support"
+              href="/supportme"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-tertiary-fixed font-bold">[4]</span>
@@ -236,10 +253,12 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-tertiary-fixed text-xs shrink-0">
                 ::SPONSOR
               </span>
-            </a>
-            <a
+            </A>
+
+
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#courses"
+              href="/courses"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[5]</span>
@@ -250,10 +269,10 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::ACADEMY
               </span>
-            </a>
-            <a
+            </A>
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-error hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#ff5555] focus:outline-none"
-              href="#sale"
+              href="/sale"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-error font-bold">[6]</span>
@@ -264,10 +283,10 @@ function HomePage() {
               <span class="text-error text-xs shrink-0 font-bold animate-pulse">
                 [HOT]
               </span>
-            </a>
-            <a
+            </A>
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#appointment"
+              href="/apointment"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[7]</span>
@@ -278,10 +297,10 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::CALENDAR
               </span>
-            </a>
-            <a
+            </A>
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#dashboard"
+              href="/dashboard"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[8]</span>
@@ -292,10 +311,10 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::OPS_CENTER
               </span>
-            </a>
-            <a
+            </A>
+            <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
-              href="#blogs"
+              href="/blogs"
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[9]</span>
@@ -306,9 +325,14 @@ function HomePage() {
               <span class="text-outline-variant group-hover:text-primary-fixed text-xs shrink-0">
                 ::DEV_LOGS
               </span>
-            </a>
+            </A>
           </div>
         </div>
+
+
+
+
+
         <div class="flex flex-col gap-4 pt-2">
           <div class="flex flex-wrap items-center justify-between border-b-2 border-outline-variant pb-2">
             <div class="flex items-center gap-2 font-headline-md text-sm md:text-base text-primary uppercase">
