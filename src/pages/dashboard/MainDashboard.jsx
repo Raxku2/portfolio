@@ -1,47 +1,6 @@
 function MainDashboard() {
   return (
     <div class="flex flex-col w-full px-margin py-6 gap-margin max-w-container-max mx-auto relative z-10 text-on-surface">
-      <header class="flex justify-between items-end border-2 border-outline-variant p-4 bg-surface-container-low relative overflow-hidden group">
-        <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-        <div class="absolute -left-[10%] top-0 h-full w-[20%] bg-gradient-to-r from-transparent via-primary-fixed/10 to-transparent skew-x-[-45deg] animate-[scan_6s_linear_infinite] pointer-events-none"></div>
-        <div class="relative z-10 flex flex-col gap-2">
-          <div class="flex items-center gap-2 font-label-mono text-xs text-primary-fixed uppercase tracking-[0.2em] animate-pulse">
-            <span class="inline-block w-2 h-2 bg-primary-fixed rounded-none"></span>
-            System Override Authorized
-          </div>
-          <h1 class="font-headline-lg text-primary uppercase drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] flex items-center gap-4">
-            <span
-              class="material-symbols-outlined text-[40px]"
-              style="font-variation-settings: 'FILL' 1;"
-            >
-              terminal
-            </span>
-            Command Center
-          </h1>
-          <p class="font-body-md text-on-surface-variant max-w-xl">
-            Execute protocol modifications. Interface established with mainframe
-            databanks. Update parameters carefully to avoid system
-            destabilization.
-          </p>
-        </div>
-        <div class="hidden md:flex items-center gap-4 border border-outline-variant p-2 bg-surface">
-          <div class="text-right">
-            <div class="font-label-mono text-xs text-on-surface-variant">
-              UPLINK_STATUS
-            </div>
-            <div class="font-body-md text-primary-fixed-dim">SECURE</div>
-          </div>
-          <div class="w-12 h-12 border-2 border-primary-fixed flex items-center justify-center p-1 relative">
-            <div class="absolute inset-0 bg-primary-fixed/20 animate-ping"></div>
-            <span
-              class="material-symbols-outlined text-primary-fixed"
-              style="font-variation-settings: 'FILL' 1;"
-            >
-              public
-            </span>
-          </div>
-        </div>
-      </header>
       <div class="grid grid-cols-1 xl:grid-cols-12 gap-margin">
         <div class="xl:col-span-4 flex flex-col gap-margin">
           <section class="border-2 border-outline-variant bg-surface flex flex-col relative group">
@@ -183,6 +142,7 @@ function MainDashboard() {
             </div>
           </section>
         </div>
+
         <div class="xl:col-span-8 flex flex-col gap-margin">
           <section class="border-2 border-outline-variant bg-surface flex flex-col relative">
             <div class="bg-secondary-fixed-dim border-b-2 border-outline-variant px-3 py-1 flex justify-between items-center h-8">
