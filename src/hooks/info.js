@@ -3,8 +3,8 @@ import { SetPortfolioInfo, SetSkills } from "../stores";
 const BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
 
 export const getPersonInfo = async () => {
-  console.log(BASE_URL);
-  console.log("get portfolio info");
+  // console.log(BASE_URL);
+  // console.log("get portfolio info");
 
   try {
     const res = await fetch(
@@ -17,7 +17,7 @@ export const getPersonInfo = async () => {
     }
 
     const result = await res.json();
-    console.log(result);
+    // console.log(result);
     SetPortfolioInfo(result.result);
   } catch (error) {
     console.log(error);
@@ -25,7 +25,7 @@ export const getPersonInfo = async () => {
 };
 
 export const getPersonSkill = async () => {
-  console.log("get portfolio Skills");
+  // console.log("get portfolio Skills");
   try {
     const res = await fetch(BASE_URL + "portfolio/skills");
 
@@ -35,7 +35,7 @@ export const getPersonSkill = async () => {
     }
 
     const result = await res.json();
-    console.log(result);
+    // console.log(result);
     SetSkills(result.result);
   } catch (error) {
     console.log(error);
