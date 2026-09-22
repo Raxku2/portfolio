@@ -1,11 +1,10 @@
 import { A } from "@solidjs/router";
 import { portfolioInfo } from "../../stores";
+import { LoginButton1 } from "../../components";
 
 function HomePage() {
-  
   return (
     <div class="relative z-10 w-full border-2 border-outline-variant bg-surface-container-low shadow-[8px_8px_0px_0px_rgba(0,251,251,0.15)] flex flex-col">
-
       <div class="flex items-center justify-between border-b-2 border-outline-variant bg-surface-container px-4 py-2.5 select-none">
         <div class="flex items-center gap-2">
           <div class="h-3 w-3 bg-error shadow-[0_0_8px_rgba(255,180,171,0.5)]"></div>
@@ -23,10 +22,7 @@ function HomePage() {
         </div>
       </div>
 
-
       <div class="p-4 md:p-8 flex flex-col gap-8">
-
-
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-surface-container-lowest/50 p-4 md:p-6 border border-outline-variant">
           <div class="lg:col-span-4 xl:col-span-3 flex flex-col items-center gap-4">
             <div class="relative group p-1.5 border-2 border-primary-fixed bg-surface-container shadow-[0_0_16px_rgba(0,251,251,0.25)]">
@@ -34,7 +30,6 @@ function HomePage() {
               <div class="absolute -top-2 -right-2 w-2 h-2 bg-primary-fixed"></div>
               <div class="absolute -bottom-2 -left-2 w-2 h-2 bg-primary-fixed"></div>
               <div class="absolute -bottom-2 -right-2 w-2 h-2 bg-primary-fixed"></div>
-              
 
               <img
                 alt="Alex Vance Pixel Art Developer"
@@ -44,10 +39,7 @@ function HomePage() {
 
               <div class="absolute inset-0 bg-primary-fixed/5 pointer-events-none mix-blend-screen"></div>
             </div>
-
-
           </div>
-
 
           <div class="lg:col-span-8 xl:col-span-9 flex flex-col justify-between font-label-mono text-xs md:text-sm space-y-1.5">
             <div class="pb-2 border-b border-outline-variant/60 flex flex-wrap items-baseline gap-2">
@@ -61,9 +53,8 @@ function HomePage() {
               <span class="text-on-surface-variant text-xs ml-auto">
                 ------------------------------------
               </span>
+                     <LoginButton1/>
             </div>
-
-
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5 pt-2 text-on-surface">
               <div class="flex items-center gap-2">
@@ -94,12 +85,14 @@ function HomePage() {
                   {portfolioInfo().role}
                 </span>
               </div>
+
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
                   SHELL:
                 </span>
                 <span class="text-on-surface">zsh / pixel-cli</span>
               </div>
+
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
                   TERMINAL:
@@ -108,6 +101,7 @@ function HomePage() {
                   Bitstream CRT Terminal Emulator
                 </span>
               </div>
+
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
                   CPU:
@@ -125,10 +119,6 @@ function HomePage() {
                 </span>
               </div>
             </div>
-
-
-
-
 
             <div class="pt-2 border-t border-outline-variant/60 flex items-center gap-3">
               <span class="text-primary-fixed font-bold text-xs uppercase tracking-wider">
@@ -172,10 +162,6 @@ function HomePage() {
           </div>
         </div>
 
-
-
-
-
         <div class="flex flex-col gap-3">
           <div class="flex items-center justify-between border-b border-outline-variant pb-2">
             <div class="flex items-center gap-2 font-headline-md text-sm md:text-base text-primary uppercase">
@@ -187,10 +173,7 @@ function HomePage() {
             </span>
           </div>
 
-
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 font-label-mono">
-
-
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
               href="/"
@@ -205,7 +188,6 @@ function HomePage() {
                 ::SYS_BIO
               </span>
             </A>
-
 
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
@@ -222,7 +204,6 @@ function HomePage() {
               </span>
             </A>
 
-
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
               href="/contact"
@@ -238,8 +219,6 @@ function HomePage() {
               </span>
             </A>
 
-
-
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-tertiary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#fce442] focus:outline-none"
               href="/supportme"
@@ -254,7 +233,6 @@ function HomePage() {
                 ::SPONSOR
               </span>
             </A>
-
 
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
@@ -328,10 +306,6 @@ function HomePage() {
             </A>
           </div>
         </div>
-
-
-
-
 
         <div class="flex flex-col gap-4 pt-2">
           <div class="flex flex-wrap items-center justify-between border-b-2 border-outline-variant pb-2">
