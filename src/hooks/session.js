@@ -5,7 +5,7 @@ const BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
 export const sessionValidator = async (sessionId) => {
   const navigate = useNavigate();
 
-  const res = await fetch(BASE_URL + "auth/session", {
+  const res = await fetch(BASE_URL + "/auth/session", {
     method: "GET",
     headers: {
       sessionid: sessionId,
