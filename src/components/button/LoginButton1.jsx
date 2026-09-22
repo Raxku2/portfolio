@@ -10,7 +10,7 @@ const LoginButton1 = () => {
       type=""
       class="p-2 border-primary-fixed border-2 cursor-pointer hover:text-primary-fixed  "
       onClick={() => {
-        window.location.href = BASE_URL + "auth/google";
+        window.location.href = BASE_URL + "/auth/google";
       }}
     >
       {buttonData().label}
