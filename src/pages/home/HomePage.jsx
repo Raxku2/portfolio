@@ -53,29 +53,16 @@ function HomePage() {
               <span class="text-on-surface-variant text-xs ml-auto">
                 ------------------------------------
               </span>
-                     <LoginButton1/>
+              <LoginButton1/>
             </div>
 
+            {/* --- UPDATED FASTFETCH PORTFOLIO GRID --- */}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5 pt-2 text-on-surface">
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  OS:
+                  LOCATION:
                 </span>
-                <span class="text-on-surface">BitstreamOS v1.0.4 x86_64</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  KERNEL:
-                </span>
-                <span class="text-on-surface">6.8.0-retro-pixel-hardened</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  UPTIME:
-                </span>
-                <span class="text-tertiary-fixed">
-                  42 days, 13 hours, 37 mins
-                </span>
+                <span class="text-on-surface">West Bengal, India</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
@@ -85,40 +72,54 @@ function HomePage() {
                   {portfolioInfo().role}
                 </span>
               </div>
-
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  SHELL:
+                  PARADIGM:
                 </span>
-                <span class="text-on-surface">zsh / pixel-cli</span>
+                <span class="text-on-surface">Dopamine-Driven Dev</span>
               </div>
-
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  TERMINAL:
+                  ACTIVE_OP:
                 </span>
-                <span class="text-on-surface">
-                  Bitstream CRT Terminal Emulator
-                </span>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  CPU:
-                </span>
-                <span class="text-on-surface">
-                  Neural Quantum 16-Core @ 4.8GHz
+                <span class="text-tertiary-fixed">
+                  Building KANI
                 </span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
-                  MEMORY:
+                  HARDWARE:
                 </span>
                 <span class="text-on-surface">
-                  4.2GiB / 16.0GiB (<span class="text-primary-fixed">26%</span>)
+                  Raspberry pi 5
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed font-bold w-24 shrink-0">
+                  HOBBIES:
+                </span>
+                <span class="text-on-surface">
+                  Automation Bot
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed font-bold w-24 shrink-0">
+                  AESTHETICS:
+                </span>
+                <span class="text-on-surface">
+                  Bespoke Sans / Boska
+                </span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed font-bold w-24 shrink-0">
+                  ENTITY:
+                </span>
+                <span class="text-on-surface">
+                  MSME (Udyam) Verified
                 </span>
               </div>
             </div>
+            {/* --- END UPDATED GRID --- */}
 
             <div class="pt-2 border-t border-outline-variant/60 flex items-center gap-3">
               <span class="text-primary-fixed font-bold text-xs uppercase tracking-wider">
@@ -473,7 +474,7 @@ function HomePage() {
 
             <a
               class="group p-3.5 bg-surface-container-low border border-outline-variant hover:border-primary-fixed transition-all hover:bg-surface-container flex flex-col justify-between gap-3 shadow-[2px_2px_0px_rgba(0,0,0,0.5)]"
-              href="https://discord.com"
+              href="https://discord.com/users/977144641629605958"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -489,7 +490,7 @@ function HomePage() {
                 </span>
               </div>
               <div class="font-label-mono text-xs text-on-surface-variant flex items-center justify-between">
-                <span class="truncate">vance#1337</span>
+                <span class="truncate">pinaka</span>
                 <span class="text-primary-fixed opacity-0 group-hover:opacity-100 transition-opacity">
                   →
                 </span>
