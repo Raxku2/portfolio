@@ -5,7 +5,14 @@ export const [portfolioInfo, SetPortfolioInfo] = createSignal({
   role: "Developer",
   dp: "https://lh3.googleusercontent.com/aida-public/AB6AXuD2UbLKuD27Cax_yJtLD0FZsMafR-aU3SHJKDoHVirS-G6ijqJoOqqX3K-30JS4aN3cnj-dNJl0M_nJP0TGlbJnoyFSQBVJZztsthCBDch_zmoxZdbtrJp-maHycytIdtXvQozlW7sojgSs2cA0waXyqYEwBPqgHmnbw7PCJa5BvItNpulaztpf20rnh4OMkt79-YqQW6VYAuNKSihR7FbOLqFFafr8r8TQ1E6XBgXfGwN7boiWsaY",
   uptime: "99.98",
-  energy_level: "MAX",
+  energy_level: "60",
+  location: "West Bengal, India",
+  hobbies: "Automation Bot",
+  bio_title: "BIO",
+  online: false,
+  work_load: "20",
+  memory: "14.4",
+  dp_file_id: "",
   bio: {
     part_1:
       "Highly optimized carbon-based intelligence specializing in full-stack architecture, legacy mainframe modernization, and hyper-scalable digital ecosystems. Proficient in translating raw caffeine input into rigorous logic models and high-performance user interfaces.",
@@ -40,31 +47,6 @@ export const [skills, SetSkills] = createSignal({
       name: "GSAP",
       desc: "A robust JavaScript toolset that turns developers into animation superheroes.",
       url: "https://gsap.com/",
-    },
-    {
-      name: "Zustand",
-      desc: "A small, fast, and scalable bearbones state-management solution.",
-      url: "https://zustand-demo.pmnd.rs/",
-    },
-    {
-      name: "Redux",
-      desc: "A predictable state container for JavaScript apps.",
-      url: "https://redux.js.org/",
-    },
-    {
-      name: "Browser Extensions",
-      desc: "Custom modules to extend web browser capabilities.",
-      url: "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions",
-    },
-    {
-      name: "SEO",
-      desc: "Search Engine Optimization techniques for improving site visibility.",
-      url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
-    },
-    {
-      name: "AdSense",
-      desc: "Google's program for serving interactive media advertisements on websites.",
-      url: "https://adsense.google.com/",
     },
   ],
   BACKEND_CORE: [

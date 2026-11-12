@@ -2,6 +2,7 @@ import { render } from "solid-js/web";
 import { Router, Route } from "@solidjs/router";
 import "./index.css";
 import App from "./App.jsx";
+import { RequireAuth } from "./components";
 
 // Import your pages
 import { AboutPage, ContactPage, HomePage, LoginPage, MainDashboard, PrivacyPage, ProjectsPage } from "./pages";
@@ -20,7 +21,10 @@ render(
         <Route path="/courses" component={() => <h1>courses</h1>} />
         <Route path="/sale" component={() => <h1>sale</h1>} />
         <Route path="/apointment" component={() =>  <h1>apointment</h1>} />
-        <Route path="/dashboard" component={MainDashboard} />
+        {/* Logged-in admin area: the guard redirects to /home without a session */}
+        <Route path="/dashboard" component={RequireAuth}>
+          <Route path="/" component={MainDashboard} />
+        </Route>
         <Route path="/blogs" component={() => <h1>blogs</h1>} />
         <Route path="/privacy" component={PrivacyPage} />
         <Route path="/login" component={LoginPage} />

@@ -1,4 +1,4 @@
-import { SetPortfolioInfo, SetSkills } from "../stores";
+import { SetPortfolioInfo, SetProjects, SetSkills } from "../stores";
 
 const BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
 
@@ -43,5 +43,13 @@ export const getPersonSkill = async () => {
 };
 
 export const getPersonProjects = async () => {
-  console.log("get portfolio info");
+  try {
+    const res = await fetch(BASE_URL + "/projects");
+    if (res.status !== 200) return;
+
+    const result = await res.json();
+    if (Array.isArray(result)) SetProjects(result);
+  } catch (error) {
+    console.log(error);
+  }
 };

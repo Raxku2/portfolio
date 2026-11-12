@@ -1,4 +1,51 @@
-import { experience, portfolioInfo, projects, SetPortfolioInfo, SetSkills, skills } from "./person/PersonInfo";
+import {
+  AUTH_STORAGE_KEY,
+  clearAuthSession,
+  hasRootAccess,
+  hydrateAuthSession,
+  isAuthenticated,
+  saveAuthSession,
+  SetIsAuthenticated,
+  SetSessionId,
+  SetUserInfo,
+  sessionId,
+  syncUserToStores,
+  userInfo,
+} from "./admin/AdminInfo";
+import {
+  experience,
+  portfolioInfo,
+  projects,
+  SetExperience,
+  SetPortfolioInfo,
+  SetProjects,
+  SetSkills,
+  skills,
+} from "./person/PersonInfo";
 import { formdata, setFormdata } from "./user/contactsForm";
 
-export {projects, experience, skills, portfolioInfo, SetPortfolioInfo, SetSkills, formdata, setFormdata };
+export {
+  projects,
+  SetProjects,
+  experience,
+  SetExperience,
+  skills,
+  portfolioInfo,
+  SetPortfolioInfo,
+  SetSkills,
+  formdata,
+  setFormdata,
+  // Auth / logged-in user
+  AUTH_STORAGE_KEY,
+  userInfo,
+  SetUserInfo,
+  sessionId,
+  SetSessionId,
+  isAuthenticated,
+  hasRootAccess,
+  SetIsAuthenticated,
+  saveAuthSession,
+  hydrateAuthSession,
+  clearAuthSession,
+  syncUserToStores,
+};

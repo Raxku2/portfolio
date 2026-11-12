@@ -1,8 +1,56 @@
-import { A } from "@solidjs/router";
-import { portfolioInfo } from "../../stores";
+import { A, useNavigate } from "@solidjs/router";
+import { onCleanup, onMount } from "solid-js";
+import { hasRootAccess, portfolioInfo } from "../../stores";
 import { LoginButton1 } from "../../components";
 
+// Command input map: numkeys 1-9 mirror the INTERACTIVE_BUTTON_MATRIX entries.
+const COMMAND_ROUTES = {
+  1: "/",
+  2: "/projects",
+  3: "/contact",
+  4: "/supportme",
+  5: "/courses",
+  6: "/sale",
+  7: "/apointment",
+  8: "/dashboard",
+  9: "/blogs",
+};
+
 function HomePage() {
+  const navigate = useNavigate();
+
+  const runCommand = (key) => {
+    const route = COMMAND_ROUTES[key];
+    if (!route) return;
+
+    // The dashboard is root/admin only, so the shortcut mirrors the locked button.
+    if (route === "/dashboard" && !hasRootAccess()) return;
+
+    navigate(route);
+  };
+
+  onMount(() => {
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey || event.metaKey || event.altKey) return;
+
+      const target = event.target;
+      if (
+        target?.isContentEditable ||
+        ["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName)
+      ) {
+        return;
+      }
+
+      if (!/^[1-9]$/.test(event.key)) return;
+
+      event.preventDefault();
+      runCommand(event.key);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    onCleanup(() => window.removeEventListener("keydown", handleKeyDown));
+  });
+
   return (
     <div class="relative z-10 w-full border-2 border-outline-variant bg-surface-container-low shadow-[8px_8px_0px_0px_rgba(0,251,251,0.15)] flex flex-col">
       <div class="flex items-center justify-between border-b-2 border-outline-variant bg-surface-container px-4 py-2.5 select-none">
@@ -62,7 +110,9 @@ function HomePage() {
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
                   LOCATION:
                 </span>
-                <span class="text-on-surface">West Bengal, India</span>
+                <span class="text-on-surface">
+                  {portfolioInfo().location || "West Bengal, India"}
+                </span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="text-primary-fixed font-bold w-24 shrink-0">
@@ -99,7 +149,7 @@ function HomePage() {
                   HOBBIES:
                 </span>
                 <span class="text-on-surface">
-                  Automation Bot
+                  {portfolioInfo().hobbies || "Automation Bot"}
                 </span>
               </div>
               <div class="flex items-center gap-2">
@@ -279,7 +329,16 @@ function HomePage() {
             </A>
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
+              classList={{
+                "opacity-40 grayscale pointer-events-none cursor-not-allowed":
+                  !hasRootAccess(),
+              }}
               href="/dashboard"
+              aria-disabled={!hasRootAccess()}
+              tabIndex={hasRootAccess() ? 0 : -1}
+              onClick={(event) => {
+                if (!hasRootAccess()) event.preventDefault();
+              }}
             >
               <div class="flex items-center gap-2 overflow-hidden">
                 <span class="text-primary-fixed font-bold">[8]</span>
