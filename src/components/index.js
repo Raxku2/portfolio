@@ -6,8 +6,10 @@ import RequireAuth from "./guard/RequireAuth";
 import { PageHeader } from "./header/PageHeader";
 import UserSession from "./header/UserSession";
 import SideNavBar from "./navBar/SideNavBar";
+import UnderDev from "./notification/UnderDev";
 
 export {
+  UnderDev,
   MainFooter,
   ProfileCard,
   SideNavBar,
