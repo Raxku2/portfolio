@@ -6,7 +6,7 @@ function TopNavBar() {
   const inactiveClass = "text-on-surface-variant hover:text-primary";
 
   return (
-    <nav class="flex gap-8 ml-8 font-label-mono text-label-mono">
+    <nav class="flex gap-4 ml-4 md:ml-8 md:gap-8 font-label-mono text-label-mono  ">
       <A
         href="/home"
         class={baseClass}

@@ -14,7 +14,7 @@ function App(props) {
       <div class="pl-0 md:pl-16 flex flex-col h-screen">
         <PageHeader />
 
-        <main class="grow pt-16 pb-12 bg-background relative z-10 px-margin">
+        <main class="grow pt-20 pb-12 bg-background relative z-10 px-margin">
           {/* The router will automatically inject AboutPage (or any matched route) right here */}
           {props.children}
         </main>

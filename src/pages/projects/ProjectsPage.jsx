@@ -3,7 +3,7 @@ import { projects } from "../../stores"
 
 function ProjectsPage() {
   return (
-<div class="flex flex-col w-full p-gutter sm:p-margin gap-margin">
+<div class="flex flex-col w-full px-gutter sm:px-margin gap-margin">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-margin">
     <For each={projects()}>
       {(project) => (
@@ -24,7 +24,7 @@ function ProjectsPage() {
             </div>
           </header>
           
-          <div class="p-3 flex flex-col gap-4 flex-grow">
+          <div class="p-3 flex flex-col gap-4 grow">
             {/* THUMBNAIL AREA */}
             <div 
               class="w-full aspect-video border-2 border-outline-variant relative overflow-hidden group-hover:border-primary-fixed-dim transition-colors"
@@ -50,7 +50,7 @@ function ProjectsPage() {
             </div>
 
             {/* DESCRIPTION AREA */}
-            <p class="font-body-md text-on-surface-variant text-sm flex-grow">
+            <p class="font-body-md text-on-surface-variant text-sm grow">
               <Show when={project.about_line_1}>
                 {project.about_line_1}<br />
               </Show>

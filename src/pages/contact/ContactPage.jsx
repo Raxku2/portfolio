@@ -55,7 +55,7 @@ function ContactPage() {
 
   return (
     <div class="flex flex-col w-full h-full justify-between pb-8">
-      <div class="flex flex-col grow max-w-container-max mx-auto w-full px-margin py-8 gap-8 mt-12">
+      <div class="flex flex-col grow max-w-container-max mx-auto w-full px-margin py-8 gap-8 mt-4">
         <div class="border-2 border-outline p-6 bg-surface-container shadow-[8px_8px_0px_#00fbfb]">
           <h1 class="font-headline-lg text-headline-lg text-primary uppercase mb-4 tracking-tight border-b-2 border-outline-variant pb-2">
             <span class="text-primary-fixed">&gt;</span> SEND A MESSAGE TO THE ADMIN

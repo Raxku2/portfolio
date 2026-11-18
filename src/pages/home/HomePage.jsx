@@ -53,21 +53,26 @@ function HomePage() {
 
   return (
     <div class="relative z-10 w-full border-2 border-outline-variant bg-surface-container-low shadow-[8px_8px_0px_0px_rgba(0,251,251,0.15)] flex flex-col">
-      <div class="flex items-center justify-between border-b-2 border-outline-variant bg-surface-container px-4 py-2.5 select-none">
-        <div class="flex items-center gap-2">
+
+      <div class="flex items-center justify-between border-b-2 border-outline-variant bg-surface-container px-4 py-2.5 select-none ">
+
+        <div class="md:flex items-center gap-2 hidden ">
           <div class="h-3 w-3 bg-error shadow-[0_0_8px_rgba(255,180,171,0.5)]"></div>
           <div class="h-3 w-3 bg-tertiary-fixed shadow-[0_0_8px_rgba(252,228,66,0.5)]"></div>
           <div class="h-3 w-3 bg-primary-fixed shadow-[0_0_8px_rgba(0,251,251,0.5)]"></div>
         </div>
-        <span class="font-label-mono text-xs md:text-sm text-primary-fixed tracking-wider uppercase font-bold flex items-center gap-2">
+
+        <span class="font-label-mono text-xs md:text-sm text-primary-fixed tracking-wider uppercase font-bold flex items-center gap-2 pl-2 md:pl-0">
           <span class="inline-block w-2 h-2 bg-primary-fixed animate-ping rounded-full"></span>
-          TTY1 - VANCE@BITSTREAM-MAINFRAME [SYS_ARCHITECT]
+          TTY1 - RAKESH@ARCCH-HOME [SYS_ARCHITECT]
         </span>
+
         <div class="hidden sm:flex items-center gap-2 font-label-mono text-[11px] text-outline">
           <span>UTF-8</span>
           <span>|</span>
           <span>BAUD: 115200</span>
         </div>
+
       </div>
 
       <div class="p-4 md:p-8 flex flex-col gap-8">
@@ -101,7 +106,7 @@ function HomePage() {
               <span class="text-on-surface-variant text-xs ml-auto">
                 ------------------------------------
               </span>
-              <LoginButton1/>
+              <LoginButton1 />
             </div>
 
             {/* --- UPDATED FASTFETCH PORTFOLIO GRID --- */}
@@ -224,7 +229,7 @@ function HomePage() {
             </span>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 font-label-mono">
+          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3 font-label-mono">
             <A
               class="group flex items-center justify-between p-3.5 bg-surface-container border-2 border-outline-variant hover:border-primary-fixed hover:bg-surface-container-high transition-all shadow-[2px_2px_0px_#151d1d] hover:shadow-[4px_4px_0px_#00fbfb] focus:outline-none"
               href="/"
@@ -549,7 +554,7 @@ function HomePage() {
                 </span>
               </div>
               <div class="font-label-mono text-xs text-on-surface-variant flex items-center justify-between">
-                <span class="truncate">pinaka</span>
+                <span class="truncate">raxku2</span>
                 <span class="text-primary-fixed opacity-0 group-hover:opacity-100 transition-opacity">
                   →
                 </span>
